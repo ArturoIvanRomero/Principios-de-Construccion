@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-1.0" prefHeight="600.0" prefWidth="1100.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="alumnos.controlador.FXMLMateriasController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="600.0" layoutX="0.0" layoutY="-7.0" stroke="WHITE" strokeType="INSIDE" width="1100.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" layoutX="200.0" layoutY="33.0" stroke="$x1" strokeType="INSIDE" width="900.0">
+      <fill>
+        <Color blue="0.616" green="0.322" red="0.094" fx:id="x1" />
+      </fill>
+    </Rectangle>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="50.0" layoutX="0.0" layoutY="34.0" stroke="$x1" strokeType="INSIDE" width="75.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="200.0" layoutX="730.0" layoutY="131.0" stroke="$x2" strokeType="INSIDE" width="350.0">
+      <fill>
+        <Color blue="0.875" green="0.875" red="0.875" fx:id="x2" />
+      </fill>
+    </Rectangle>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#28ad56" height="15.0" layoutX="0.0" layoutY="557.0" stroke="$x1" strokeType="INSIDE" width="1100.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="25.0" layoutX="0.0" layoutY="580.0" stroke="$x1" strokeType="INSIDE" width="1100.0" />
+    <ImageView fitHeight="93.50009176466207" fitWidth="124.66679382324219" layoutX="75.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../iconos/uv.png" />
+      </image>
+    </ImageView>
+    <Label id="textFieldAlumno" fx:id="labelMateria" layoutX="431.0" layoutY="24.0" text="Materias">
+      <font>
+        <Font name="Arial Black" size="50.0" />
+      </font>
+    </Label>
+    <Button fx:id="buttonAlumnos" layoutX="777.0" layoutY="41.0" mnemonicParsing="false" onAction="#alumnos" text="Regresar a Alumnos" textFill="$x1">
+      <font>
+        <Font name="Arial Black" size="18.0" fx:id="x3" />
+      </font>
+    </Button>
+    <Button id="salir" fx:id="buttonSalir" font="$x3" layoutX="1011.0" layoutY="41.0" mnemonicParsing="false" onAction="#salir" text="Salir" textFill="$x1" />
+    <TableView id="tableAlumnos" fx:id="tableMaterias" layoutX="6.0" layoutY="131.0" prefHeight="200.0" prefWidth="570.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="230.0" text="Nombre" fx:id="tableColumnNombre" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="80.0" text="NRC" fx:id="tableColumnNRC" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Horas Prácticas" fx:id="tableColumnHorasPracticas" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Horas Teóricas" fx:id="tableColumnHorasTeoricas" />
+        <TableColumn prefWidth="60.0" text="Créditos" fx:id="tableColumnCreditos" />
+      </columns>
+    </TableView>
+    <Button fx:id="buttonAgregar" font="$x3" layoutX="594.0" layoutY="131.0" mnemonicParsing="false" onAction="#agregarMateria" text="Agregar" textFill="$x1" />
+    <Button fx:id="buttonEditar" font="$x3" layoutX="604.0" layoutY="170.0" mnemonicParsing="false" onAction="#editarMateria" text="Editar" textFill="$x1" />
+    <Button id="bu" fx:id="buttonEliminar" font="$x3" layoutX="595.0" layoutY="209.0" mnemonicParsing="false" onAction="#eliminarMateria" text="Eliminar" textFill="$x1" />
+    <Button fx:id="buttonLimpiar" font="$x3" layoutX="598.0" layoutY="248.0" mnemonicParsing="false" onAction="#limpiarTextFields" text="Limpiar" textFill="$x1" />
+    <Button fx:id="buttonGuardar" font="$x3" layoutX="596.0" layoutY="289.0" mnemonicParsing="false" onAction="#guardarMaterias" text="Guardar" textFill="$x1" />
+    <Label id="labelMatricula" fx:id="labelNombre" layoutX="744.0" layoutY="151.0" text="Nombre:" />
+    <Label id="labelNombre" fx:id="labelNRC" layoutX="744.0" layoutY="182.0" text="NRC:" />
+    <Label id="labelHorasPrácticas" fx:id="labelHorasPracticas" layoutX="744.0" layoutY="212.0" text="Horas Prácticas" />
+    <Label fx:id="labelHorasTeoricas" layoutX="744.0" layoutY="243.0" text="Horas Teóricas:" />
+    <Label id="labelHorasTeoricas" fx:id="labelCreditos" layoutX="744.0" layoutY="274.0" text="Créditos:" />
+    <Label fx:id="labelNota" layoutX="744.0" layoutY="315.0" text="***Todos los campos son obligatorios***" />
+    <TextField id="textFieldMatricula" fx:id="textFieldNombre" layoutX="864.0" layoutY="148.0" prefWidth="200.0" />
+    <TextField id="textFieldNombres" fx:id="textFieldNRC" layoutX="864.0" layoutY="179.0" prefWidth="200.0" />
+    <TextField id="textFiledAoellidoPaterno" fx:id="textFieldHorasPracticas" layoutX="864.0" layoutY="209.0" prefWidth="200.0" />
+    <TextField id="textFieldApellidoMaterno" fx:id="textFieldHorasTeoricas" layoutX="864.0" layoutY="240.0" prefWidth="200.0" />
+    <TextField id="textFieldApellidoMaterno" fx:id="textFieldCreditos" layoutX="864.0" layoutY="271.0" prefWidth="200.0" />
+    <TableView fx:id="tableHorariosMaterias" layoutX="196.0" layoutY="352.0" prefHeight="200.0" prefWidth="380.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Día" fx:id="tableColumnDia" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="80.0" text="Salón" fx:id="tableColumnSalon" />
+        <TableColumn prefWidth="100.0" text="Hora Entrada" fx:id="tableColumnHoraEntrada" />
+        <TableColumn prefWidth="100.0" text="Hora Salida" fx:id="tableColumnHoraSalida" />
+      </columns>
+    </TableView>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x2" height="200.0" layoutX="730.0" layoutY="352.0" stroke="$x2" strokeType="INSIDE" width="350.0" />
+    <Label id="labelMatricula" fx:id="labelDia" layoutX="747.0" layoutY="383.0" text="Día:" />
+    <Label id="labelNombre" fx:id="labelSalon" layoutX="746.0" layoutY="412.0" text="Salón:" />
+    <Label id="labelApellidoPaterno" fx:id="labelHoraEntrada" layoutX="747.0" layoutY="441.0" text="Hora entrada:" />
+    <Label id="labelApellidoMaterno" fx:id="labelHoraSalida" layoutX="747.0" layoutY="470.0" text="Hora salida;" />
+    <Label id="labelNota" fx:id="labelNota2" layoutX="747.0" layoutY="536.0" text="***Todos los campos son obligatorios***" />
+    <Button fx:id="buttonAgregar2" font="$x3" layoutX="596.0" layoutY="352.0" mnemonicParsing="false" onAction="#agregarHorarioMateria" text="Agregar" textFill="$x1" />
+    <Button id="buttonEditar" fx:id="buttonEditar2" font="$x3" layoutX="606.0" layoutY="392.0" mnemonicParsing="false" onAction="#editarHorarioMateria" text="Editar" textFill="$x1" />
+    <Button fx:id="buttonEliminar2" font="$x3" layoutX="595.0" layoutY="432.0" mnemonicParsing="false" onAction="#eliminarHorarioMateria" text="Eliminar" textFill="$x1" />
+    <Button id="buttonLimpiar" fx:id="buttonLimpiar2" font="$x3" layoutX="598.0" layoutY="472.0" mnemonicParsing="false" onAction="#limpiarTextFields2" text="Limpiar" textFill="$x1" />
+    <Button fx:id="buttonGuardar2" font="$x3" layoutX="596.0" layoutY="513.0" mnemonicParsing="false" onAction="#guardarHorariosMaterias" text="Guardar" textFill="$x1" />
+    <TextField id="textFieldMatricula" fx:id="textFieldDia" layoutX="867.0" layoutY="380.0" prefWidth="200.0" />
+    <TextField id="textFieldNombres" fx:id="textFieldSalon" layoutX="867.0" layoutY="409.0" prefWidth="200.0" />
+    <TextField id="textFiledAoellidoPaterno" fx:id="textFieldHoraEntrada" layoutX="867.0" layoutY="438.0" prefWidth="200.0" />
+    <TextField id="textFieldApellidoMaterno" fx:id="textFieldHoraSalida" layoutX="867.0" layoutY="467.0" prefWidth="200.0" />
+    <Label id="labelNota" fx:id="labelNota3" layoutX="867.0" layoutY="490.0" text="Formato Hora:   *24 hrs.*   *00:00*" />
+  </children>
+</AnchorPane>
